@@ -1,0 +1,9 @@
+@mixin typography($size: $font-size-base) {
+  @include fluid("font-size", nth($size, 1), nth($size, 2));
+}
+
+@mixin typography-default() {
+  @include typography();
+  font-family: $font-lato;
+  font-weight: $font-regular;
+}

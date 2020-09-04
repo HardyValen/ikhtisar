@@ -1,0 +1,128 @@
+/* =================================================================== 
+ * Base Stylesheet
+ * ------------------------------------------------------------------
+ *
+ *  TOC:
+ *      # A. Custom Normalize
+ *      # B. Typography
+ *
+ * =================================================================== */
+
+/* ===================================================================
+ * # A. Custom Normalize
+ * ------------------------------------------------------------------- */
+html,
+body {
+  @include typography-default();
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+main {
+  display: block;
+  height: 100%;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/* # End of Normalize
+ * ----------------------- */
+
+/* ===================================================================
+ * # B. Typography
+ * ------------------------------------------------------------------- */
+html {
+  font-size: $basePercentage;
+}
+
+.font.title {
+  @include typography($font-size-title);
+  font-family: $font-poppins;
+  font-weight: $font-bold;
+  line-height: 100%;
+}
+
+h1 {
+  @include typography($font-size-h1);
+  font-family: $font-poppins;
+  font-weight: $font-bold;
+  line-height: 100%;
+}
+
+h2 {
+  @include typography($font-size-h2);
+  font-family: $font-poppins;
+  font-weight: $font-bold;
+  line-height: 100%;
+}
+
+h3 {
+  @include typography($font-size-h3);
+  font-family: $font-poppins;
+  font-weight: $font-bold;
+  line-height: 100%;
+}
+
+big {
+  @include typography($font-size-big);
+  font-family: $font-lato;
+  font-weight: $font-regular;
+  line-height: 100%;
+}
+
+p {
+  @include typography($font-size-base);
+  font-family: $font-lato;
+  font-weight: $font-regular;
+  line-height: 100%;
+}
+
+small {
+  @include typography($font-size-sm);
+  font-family: $font-lato;
+  font-weight: $font-regular;
+  line-height: 100%;
+}
+
+/* # End of Typography
+ * ----------------------- */

@@ -1,0 +1,48 @@
+// // Constant: Colors
+$color: (
+  "primary-main": #008000,
+  "primary-light-1": #66B366,
+  "primary-light-2": #A3D1A3,
+  "primary-dark-1": #006600,
+  "primary-dark-2": #004D00,
+  "secondary-main": #F9F47E,
+  "secondary-light-1": #FBF8B2,
+  "secondary-dark-1": #FFD204,
+  "black": #000000,
+  "white": #ffffff,
+  "gray-1": #333333,
+  "gray-2": #4F4F4F,
+  "gray-3": #828282,
+  "gray-4": #BDBDBD,
+  "success": #00FF66,
+  "success-bg": #80FFB3,
+  "error": #FF4D00,
+  "error-bg": #FFA680,
+  "info": #00B2FF,
+  "info-bg": #80D9FF,
+  "warning": #FF9900,
+  "warning-bg": #FFCC80,
+);
+
+$color-primary-main: map-get($color, "primary-main");
+$color-primary-light-1: map-get($color, "primary-light-1");
+$color-primary-light-2: map-get($color, "primary-light-2");
+$color-primary-dark-1: map-get($color, "primary-dark-1");
+$color-primary-dark-2: map-get($color, "primary-dark-2");
+$color-secondary-main: map-get($color, "secondary-main");
+$color-secondary-light-1: map-get($color, "secondary-light-1");
+$color-secondary-dark-1: map-get($color, "secondary-dark-1");
+$color-black: map-get($color, "black");
+$color-white: map-get($color, "white");
+$color-gray-1: map-get($color, "gray-1");
+$color-gray-2: map-get($color, "gray-2");
+$color-gray-3: map-get($color, "gray-3");
+$color-gray-4: map-get($color, "gray-4");
+$color-success: map-get($color, "success");
+$color-success-bg: map-get($color, "success-bg");
+$color-error: map-get($color, "error");
+$color-error-bg: map-get($color, "error-bg");
+$color-info: map-get($color, "info");
+$color-info-bg: map-get($color, "info-bg");
+$color-warning: map-get($color, "warning");
+$color-warning-bg: map-get($color, "warning-bg");
