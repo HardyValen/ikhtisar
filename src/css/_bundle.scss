@@ -1,5 +1,6 @@
 // Import Functions
 @import "./functions/unit-utilities";
+@import "./functions/flex-grid";
 
 // Import Modules (Constant Independent)
 @import "./modules/fonts";
@@ -7,19 +8,18 @@
 @import "./modules/scrollbar";
 
 // Import Constants
-@import "./constants/baseline";
+@import "./constants/breakpoints";
 @import "./constants/color";
 @import "./constants/fonts";
 @import "./constants/animation";
 @import "./constants/box-sizing";
+@import "./constants/flex-grid";
+@import "./constants/z-index";
+@import "./constants/box-shadow";
 
 // Global Styles as Modules (Requires Constants)
+@import "./modules/border";
+@import "./modules/box-shadow";
 @import "./modules/box-sizing";
-@import "./modules/bp-display";
-
-// Import Base CSS
-@import "./base.scss";
-
-// Component Classes
-@import "./components/fonts-class";
-@import "./components/colors-class";
+@import "./modules/breakpoints";
+@import "./modules/flex-grid";

@@ -1,16 +1,33 @@
-import React from 'react';
-import './css/main.scss';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import * as Helpers from "./functions/functions-common";
+
+import './css/global.scss';
+
+import * as Components from "./components/components-common";
+import * as Scene from "./components/scenes/scene-common";
+import * as Routes from "./routes/routes-common";
 
 function App() {
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+
+  Helpers.GetWindowSize(setWidth, setHeight);
+
   return (
     <div>
-      <span className="font title poppins">Society of Renewable Energy</span>
-      <h1 className="color primary">Society of Renewable Energy</h1>
-      <h2>Society of Renewable Energy</h2>
-      <h3>Society of Renewable Energy Institut Teknologi Bandung</h3>
-      <big>Society of Renewable Energy Institut Teknologi Bandung</big>
-      <p>Society of Renewable Energy Institut Teknologi Bandung</p>
-      <small>Society of Renewable Energy Institut Teknologi Bandung</small>
+      <Router>
+        <Switch>
+          <Route exact path={Routes.Frontend.home}>
+            <Components.SiteHelmet title="Landing"/>
+            <Scene.LandingScene width={width} height={height}/>
+          </Route>
+          <Route path={Routes.Frontend.lottieDemo}>
+            <Components.SiteHelmet title="Lottie Demo"/>
+            <Scene.LottieDemoScene/>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

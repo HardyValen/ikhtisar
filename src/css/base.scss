@@ -1,12 +1,4 @@
-/* =================================================================== 
- * Base Stylesheet
- * ------------------------------------------------------------------
- *
- *  TOC:
- *      # A. Custom Normalize
- *      # B. Typography
- *
- * =================================================================== */
+@import "./bundle";
 
 /* ===================================================================
  * # A. Custom Normalize
@@ -107,21 +99,32 @@ big {
   @include typography($font-size-big);
   font-family: $font-lato;
   font-weight: $font-regular;
-  line-height: 100%;
+  line-height: 130%;
 }
 
 p {
   @include typography($font-size-base);
   font-family: $font-lato;
   font-weight: $font-regular;
-  line-height: 100%;
+  line-height: 130%;
+  
+  &, small, big, .font.annotation {
+    color: $color-gray-1;
+  }
 }
 
 small {
   @include typography($font-size-sm);
   font-family: $font-lato;
   font-weight: $font-regular;
-  line-height: 100%;
+  line-height: 130%;
+}
+
+.font.annotation {
+  @include typography($font-size-annotation);
+  font-family: $font-lato;
+  font-weight: $font-regular;
+  line-height: 130%;
 }
 
 /* # End of Typography

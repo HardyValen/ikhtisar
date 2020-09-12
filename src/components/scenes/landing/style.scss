@@ -1,0 +1,88 @@
+@import '../../../css/bundle';
+
+.nav-overlay {
+  position: fixed;
+  background-color: $color-black;
+  width: 100vw;
+  height: 100vh;
+  transition: $defaultTransition;
+  z-index: $z-index-sidebar-overlay-inactive;
+  opacity: 0;
+
+  &[active=active] {
+    display: block;
+    opacity: .6;
+    z-index: $z-index-sidebar-overlay;
+  }
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+
+  .landing-nav {
+    @include boxsizing();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-logo {
+      @include fluid("height", 3rem, 6rem);
+    }
+  }
+
+  .landing-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: inherit;
+
+    .landing-aside {
+      @include boxsizing();
+      @include fluid("width", 24rem, 32rem);
+      background-color: $color-white;
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+      width: inherit;
+      transition: $defaultTransition;
+      overflow-y: auto;
+
+      .aside-pill-group {
+
+        .aside-pill {
+          @include boxsizing(map-get($bs, "4"));
+          cursor: pointer;
+        }
+      }
+
+      @include bp-max-width($bp-medium) {
+        position: fixed;
+        left: -100vw;
+        top: 0;
+        height: 100vh;
+        z-index: $z-index-sidebar;
+
+        &.active {
+          left: 0;
+        }
+      }
+    }
+
+    .landing-content {
+      @include boxsizing-x();
+      @include boxsizing-y();
+      width: inherit;
+      display: flex;
+
+      .content-body {
+        // height: 200vh;
+        width: 100%;
+      }
+    }
+  }
+}

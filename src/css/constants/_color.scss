@@ -15,13 +15,13 @@ $color: (
   "gray-3": #828282,
   "gray-4": #BDBDBD,
   "success": #00FF66,
-  "success-bg": #80FFB3,
+  "success-alt": #80FFB3,
   "error": #FF4D00,
-  "error-bg": #FFA680,
+  "error-alt": #FFA680,
   "info": #00B2FF,
-  "info-bg": #80D9FF,
+  "info-alt": #80D9FF,
   "warning": #FF9900,
-  "warning-bg": #FFCC80,
+  "warning-alt": #FFCC80,
 );
 
 $color-primary-main: map-get($color, "primary-main");

@@ -1,0 +1,11 @@
+// Super Minified Bootstrap Grid Global Classes
+
+.row {
+  @include make-row();
+
+  & > * {
+    @include make-col-ready();
+  }
+}
+
+@include make-grid-columns();

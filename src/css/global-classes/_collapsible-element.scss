@@ -1,0 +1,7 @@
+.collapse {
+  transition: $defaultTransition;
+
+  &:not(.show) {
+    display: none;
+  }
+}
